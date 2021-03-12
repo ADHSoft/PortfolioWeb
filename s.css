@@ -1,0 +1,20 @@
+h1,h2,h3,select,label,button,a,input {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    max-width: 80%;
+    min-height: 30px;
+    display: block;
+
+    
+}
+
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2017/12/28/15/06/background-3045402_960_720.png");
+    background-size: cover;
+    background-color: #ccc;
+    background-blend-mode: lighten;
+}
+
