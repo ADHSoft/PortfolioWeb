@@ -3,8 +3,9 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 
 const typingAni = async (id=null,skip=0,skipf=0, speed =1) => {
 
-    texto = new String("");
-    t2 = new String("");
+    texto = new String;
+    t2 = new String;
+    t2="";
 
     var i=0;
     texto = document.getElementById(id).textContent;
