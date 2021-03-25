@@ -3,38 +3,73 @@
     <head>
         <title >Portfolio Web</title>
         <link rel="stylesheet" type="text/css" href="s.css">
-		<meta name="robots" content="noindex">
+        <style type="text/css"> /* particles */
+          html , body  {  
+              margin: 0;
+              padding: 0;
+          }
+          .bg_particles {
+              position:absolute;
+              display:block;              
+              top: 0;              
+              left: 0;              
+              z-index: -1;
+          }
+        </style>
+
+        <script>
+          window.onload = async function() {
+
+            await typingAni("email",1 ,0,100 );
+            await typingAni("name",1 ,1 );
+            
+            //return;
+            Particles.init({
+              selector: '.bg_particles',
+              color: '#339999',
+              maxParticles: 60,
+              connectParticles: true,
+              speed: 0.5
+            });
+          };
+        </script>
+
+		    <meta name="robots" content="noindex">
     </head>
 
     <body>
 
-        
+        <br>
         <h1 style="font-size: large;">Portfolio Web</h1>
-        <br/>
-        <br/>
-        <br/>
+        <br><br><br>
         <h2>
 
-            <label id="name" style="color:#8880">A|l"e#j$a%n&d/r(o) =D!." #H$e%r&m/e(||</label> <br/>
-            <h3><label>Programador. Desarrollador Fullstack Web </label></h3>
+            <label id="name" style="color:rgb(102, 102, 102); opacity: 0;">A|l"e#j$a%n&d/r(o) =D!." #H$e%r&m/e(||</label> <br/>
+            <h3><p>Programador. Desarrollador Fullstack Web </p></h3>
             <br/><br/><br/>
+            
             <h3 >
-                <a style="font-style: italic;">Demos:</a>
-                <br/>
+                <p style="font-style: italic;">Demos / Proyectos:</p>
                 <br/> 
-                <a href="http://adhsoft.github.io/ReactShop1/">E-Commerce (React)</a>
-                <a href="http://adhsoft.github.io/convbasesJS/">Conversor De Bases Numéricas (JS)</a>
+                <div class="webDemos">
+                  <a href="http://adhsoft.github.io/ReactShop1/">E-Commerce (React + Online DB)</a>
+                  <br>
+                  <a href="http://adhsoft.github.io/convbasesJS/">Conversor De Bases Numéricas (JS)</a>
+                </div>
                 <br/>
                 <br/>
                 <!-- <a href="http://github.com/ADHSoft" style="font-size: smaller;"></a> -->
             </h3>
-
+            <br>
+            <br>
 
             <div class="buttons" style=" margin: auto; text-align: center; min-height: 30px;" >
                 <a class="button button--secondary button--github"  href="http://github.com/ADHSoft" target="_blank">
                     <div class="button__icon" alt="(proyectos de facultad, demos, opensource, etc.)"></div>
                     <div class="button__text">
-                        <span class="button__kind">GitHub</span>
+                        <span class="button__kind">GitHub <br> ADHSoft
+                        </span>
+
                     </div>
                 </a>
             </div>
@@ -42,52 +77,17 @@
             <br/>
         </h2>
 
-
-        <!-- particles -->
-        <style>
-            html /*, body */ {  
-                margin: 0;
-                padding: 0;
-            }
-            .bg_particles_css_class {
-                position:absolute;
-                display:block;              
-                top: 0;              
-                left: 0;              
-                 z-index: -1;
-             }
-        </style>
-        <script src="https://npmcdn.com/particlesjs@2.2.2/dist/particles.min.js"></script>
-        <script>
-      window.onload = function() {
-        Particles.init({
-          selector: '.bg_particles_css_class',
-          color: '#339999',
-          maxParticles: 130,
-          connectParticles: true,
-          responsive: [
-            {
-              breakpoint: 768,
-              options: {
-                maxParticles: 80
-              }
-            }, {
-              breakpoint: 375,
-              options: {
-                maxParticles: 50
-              }
-            }
-          ]
-        });
-      };
-        </script>
-        <canvas class="bg_particles_css_class">
-        </canvas>
-
+        <footer>
+          <h3 style="font-size: smaller; font-style: italic;"><a id="email" style="opacity: 0;" href="mailto:alejandrodherme@gmail.com">aalaeajaaanadaraoadahaearamaea@agamaaaiala.acaoama</a></h3>
+        </footer>
+        
+        <!-- particles canvas (place last) -->
+        <script id="part_js" src="https://npmcdn.com/particlesjs@2.2.2/dist/particles.min.js"></script>
+        <canvas class="bg_particles"></canvas>
         <!-- fin particles -->
 
 
         <script src="./typingAni.js"></script>
-        <script>typingAni("name",1  )</script>
+        <script></script>
     </body>
 </html>

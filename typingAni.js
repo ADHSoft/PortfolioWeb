@@ -1,21 +1,20 @@
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
-texto = new String;
-t2 = new String;
+const typingAni = async (id=null,skip=0,skipf=0, speed =1) => {
 
-var i=0;
+    texto = new String("");
+    t2 = new String("");
 
-const typingAni = async (id,skip=0,skipf=1) => {
-    
+    var i=0;
     texto = document.getElementById(id).textContent;
     
     for (i=0 ; i<texto.length ; i+=(skip+1) )
     {
         t2+=texto.charAt(i);
         document.getElementById(id).textContent=t2;
-        await delay(40+i*2);
-        document.getElementById(id).style="color:#000c;";
+        if (i==0) document.getElementById(id).style="opacity:1";
+        if (speed!=100) await delay((40+i*2)/speed);        
 
     }
     await delay(150);
@@ -24,8 +23,9 @@ const typingAni = async (id,skip=0,skipf=1) => {
     for (i=0 ; i<texto.length-skipf ; i++ )
     {
         t2+=texto.charAt(i);
-        document.getElementById(id).textContent=t2;
+        
     }
+    document.getElementById(id).textContent=t2;
 
+    
 };
-
