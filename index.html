@@ -4,10 +4,10 @@
         <title >Portfolio Web</title>
         <link rel="stylesheet" type="text/css" href="s.css">
         <style type="text/css"> /* particles */
-          html , body  {  
+          /* html , body  {  
               margin: 0;
               padding: 0;
-          }
+          } */
           .bg_particles {
               position:absolute;
               display:block;              
@@ -21,8 +21,9 @@
           window.onload = async function() {
 
             await typingAni("email",1 ,0,100 );
-            await typingAni("name",1 ,1 );
-            
+            document.getElementById("email").href+=document.getElementById("email").innerText;
+            await typingAni("name",1 ,1 );            
+
             //return;
             Particles.init({
               selector: '.bg_particles',
@@ -34,7 +35,8 @@
           };
         </script>
 
-		    <meta name="robots" content="noindex">
+		    <meta name="robots" content="noindex">        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
@@ -45,7 +47,7 @@
         <h2>
 
             <label id="name" style="color:rgb(102, 102, 102); opacity: 0;">A|l"e#j$a%n&d/r(o) =D!." #H$e%r&m/e(||</label> <br/>
-            <h3><p>Programador. Desarrollador Fullstack Web </p></h3>
+            <h3><p><span class=""> Programador.</span><span class=""> Desarrollador Fullstack Web</span></p></h3>
             <br/><br/><br/>
             
             <h3 >
@@ -64,8 +66,8 @@
             <br>
 
             <div class="buttons" style=" margin: auto; text-align: center; min-height: 30px;" >
-                <a class="button button--secondary button--github"  href="http://github.com/ADHSoft" target="_blank">
-                    <div class="button__icon" alt="(proyectos de facultad, demos, opensource, etc.)"></div>
+                <a class="button button--secondary button--github" title="(contiene proyectos de facultad, demos, opensource, etc.)" href="http://github.com/ADHSoft" target="_blank">
+                    <div class="button__icon"></div>
                     <div class="button__text">
                         <span class="button__kind">GitHub <br> ADHSoft
                         </span>
@@ -78,7 +80,7 @@
         </h2>
 
         <footer>
-          <h3 style="font-size: smaller; font-style: italic;"><a id="email" style="opacity: 0;" href="mailto:alejandrodherme@gmail.com">aalaeajaaanadaraoadahaearamaea@agamaaaiala.acaoama</a></h3>
+          <h3 style="font-size: smaller; font-style: italic;"><a id="email" style="opacity: 0;" href="mailto:">aalaeajaaanadaraoadahaearamaea@agamaaaiala.acaoama</a></h3>
         </footer>
         
         <!-- particles canvas (place last) -->
@@ -88,6 +90,5 @@
 
 
         <script src="./typingAni.js"></script>
-        <script></script>
     </body>
 </html>

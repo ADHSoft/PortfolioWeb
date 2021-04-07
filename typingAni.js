@@ -29,7 +29,5 @@ const typingAni = async (id=null,skip=0,skipf=0,speed=1) => {
         }
         document.getElementById(id).textContent=t2;
     }
-    delete t2, texto;
-
     
 };

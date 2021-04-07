@@ -1,0 +1,16 @@
+@keyframes example {
+    0%   {background-color: rgb(213, 9, 240);}
+    25%  {background-color: rgb(216, 209, 117);}
+    50%  {rotate: 180grad;background-color: rgba(233, 27, 199, 1);}
+    75% {rotate: 18000000grad;background-color: rgba(233, 27, 199, 0.226); }
+  }
+  
+/* The element to apply the animation to */
+.gai {
+    /* width: 100px;
+    height: 100px; */
+    background-color: #0000;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
